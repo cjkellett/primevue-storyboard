@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fontsource/titillium-web": "^4.5.0",
     "@primeuix/themes": "^2.0.2",
     "primeicons": "^7.0.0",
     "primevue": "^4.5.4",

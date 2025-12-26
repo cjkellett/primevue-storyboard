@@ -1,5 +1,8 @@
 import { createApp } from "vue";
 import PrimeVue from "primevue/config";
+import "@fontsource/titillium-web/400.css";
+import "@fontsource/titillium-web/600.css";
+import "@fontsource/titillium-web/700.css";
 import MyCustomPreset from "./theme";
 import "./style.css";
 import App from "./App.vue";

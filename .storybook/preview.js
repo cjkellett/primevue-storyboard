@@ -2,6 +2,9 @@ import { setup } from "@storybook/vue3";
 import PrimeVue from "primevue/config";
 import MyCustomPreset from "../src/theme";
 import "../src/style.css";
+import "@fontsource/titillium-web/400.css";
+import "@fontsource/titillium-web/600.css";
+import "@fontsource/titillium-web/700.css";
 
 // Configure PrimeVue globally for all stories
 setup((app) => {
