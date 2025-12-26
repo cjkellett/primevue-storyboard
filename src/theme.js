@@ -2,6 +2,13 @@ import Aura from "@primeuix/themes/aura";
 import { definePreset } from "@primeuix/themes";
 
 const MyCustomPreset = definePreset(Aura, {
+  primitive: {
+    fontWeight: {
+      normal: "400",
+      semibold: "600",
+      bold: "700",
+    },
+  },
   semantic: {
     primary: {
       50: "#fffde7",
@@ -15,6 +22,15 @@ const MyCustomPreset = definePreset(Aura, {
       800: "#f9a825",
       900: "#f57f17",
       950: "#f57f17",
+    },
+  },
+  components: {
+    button: {
+      root: {
+        label: {
+          fontWeight: "{fontWeight.semibold}",
+        },
+      },
     },
   },
 });
