@@ -43,6 +43,12 @@ const MyCustomPreset = definePreset(Aura, {
         label: {
           fontWeight: "{fontWeight.semibold}",
         },
+        focusRing: {
+          width: "2px",
+          style: "solid",
+          color: "{primary.300}",
+          offset: "2px",
+        },
       },
     },
   },
