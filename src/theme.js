@@ -9,7 +9,7 @@ const MyCustomPreset = definePreset(Aura, {
       200: "#fff59d",
       300: "#fff176",
       400: "#ffee58",
-      500: "#ffeb3b", // Main primary color
+      500: "#a78bfa", // Main primary color (light purple)
       600: "#fdd835",
       700: "#fbc02d",
       800: "#f9a825",

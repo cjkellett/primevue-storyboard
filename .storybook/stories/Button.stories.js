@@ -4,69 +4,28 @@ export default {
   title: "PrimeVue/Button",
   component: Button,
   tags: ["autodocs"],
-  argTypes: {
-    label: {
-      control: "text",
-      description: "Text to display on the button",
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "PrimeVue Button component. [View PrimeVue Button documentation](https://primevue.org/button/)",
+      },
     },
+  },
+  argTypes: {
+    label: { control: "text" },
     severity: {
       control: "select",
       options: ["primary", "secondary", "success", "info", "warning", "danger"],
-      description: "Severity style of the button",
     },
-    outlined: {
-      control: "boolean",
-      description: "Whether the button is outlined",
-    },
-    text: {
-      control: "boolean",
-      description: "Whether the button is text only",
-    },
-    rounded: {
-      control: "boolean",
-      description: "Whether the button has rounded corners",
-    },
-    icon: {
-      control: "text",
-      description: "Icon class to display",
-    },
+    outlined: { control: "boolean" },
+    text: { control: "boolean" },
+    rounded: { control: "boolean" },
   },
 };
 
-export const HelloWorld = {
+export const Default = {
   args: {
-    label: "Hello World",
+    label: "Button",
   },
 };
-
-export const Primary = {
-  args: {
-    label: "Primary Button",
-    severity: "primary",
-  },
-};
-
-export const Outlined = {
-  args: {
-    label: "Outlined Button",
-    severity: "primary",
-    outlined: true,
-  },
-};
-
-export const Text = {
-  args: {
-    label: "Text Button",
-    severity: "primary",
-    text: true,
-  },
-};
-
-export const Rounded = {
-  args: {
-    label: "Rounded Button",
-    severity: "primary",
-    rounded: true,
-  },
-};
-
