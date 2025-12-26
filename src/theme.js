@@ -45,9 +45,6 @@ const MyCustomPreset = definePreset(Aura, {
         },
         focusRing: {
           width: "2px",
-          style: "solid",
-          color: "{primary.300}",
-          offset: "2px",
         },
       },
     },
