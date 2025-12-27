@@ -28,6 +28,9 @@ const preview = {
         date: /Date$/i,
       },
     },
+    docs: {
+      codePanel: true,
+    },
   },
 };
 

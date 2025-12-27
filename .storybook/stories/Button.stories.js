@@ -198,20 +198,6 @@ export default {
 export const Default = {
   args: {
     label: "Button",
-    icon: "",
-    iconPos: "left",
-    severity: undefined,
-    variant: undefined,
-    size: undefined,
-    raised: false,
-    rounded: false,
-    disabled: false,
-    loading: false,
-    loadingIcon: "",
-    badge: "",
-    badgeSeverity: undefined,
-    fluid: false,
-    type: "button",
   },
   parameters: {
     docs: {
@@ -252,6 +238,16 @@ export const WithTooltip = {
       description: {
         story:
           "Buttons can be enhanced with tooltips using the `v-tooltip` directive. Hover over each button to see the tooltip in action.",
+      },
+      source: {
+        code: `<Button 
+            v-tooltip.top="'Tooltip on top'"
+            label="Top Tooltip"
+          />
+          <Button 
+            v-tooltip.bottom="'Tooltip on bottom'"
+            label="Bottom Tooltip"
+          />`,
       },
     },
   },
