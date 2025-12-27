@@ -16,7 +16,21 @@ import TabPanel from "primevue/tabpanel";
       <TabPanels>
         <TabPanel value="0">
           <h1>Home</h1>
-          <p>Welcome to the Home page!</p>
+          <p>This is the Home page.</p>
+          <Tabs value="0">
+            <TabList>
+              <Tab value="0">Analysis</Tab>
+              <Tab value="1">Table View</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel value="0">
+                <p>Analysis content goes here.</p>
+              </TabPanel>
+              <TabPanel value="1">
+                <p>Table View content goes here.</p>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
         </TabPanel>
         <TabPanel value="1">
           <h1>About</h1>
