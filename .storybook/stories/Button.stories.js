@@ -162,15 +162,6 @@ export default {
         defaultValue: { summary: "-" },
       },
     },
-    link: {
-      control: "boolean",
-      description:
-        "Add a link style to the button. (Deprecated: use variant='link' instead)",
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: "false" },
-      },
-    },
     fluid: {
       control: "boolean",
       description: "Spans 100% width of the container when enabled.",
@@ -241,13 +232,13 @@ export const WithTooltip = {
       },
       source: {
         code: `<Button 
-            v-tooltip.top="'Tooltip on top'"
-            label="Top Tooltip"
-          />
-          <Button 
-            v-tooltip.bottom="'Tooltip on bottom'"
-            label="Bottom Tooltip"
-          />`,
+  v-tooltip.top="'Tooltip on top'"
+  label="Top Tooltip"
+/>
+<Button 
+  v-tooltip.bottom="'Tooltip on bottom'"
+  label="Bottom Tooltip"
+/>`,
       },
     },
   },
