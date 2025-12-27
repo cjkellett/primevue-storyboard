@@ -5,7 +5,7 @@ import Button from "primevue/button";
 <template>
   <div class="container">
     <h1>Hello World</h1>
-    <Button label="Hello World" />
+    <Button v-tooltip.top="'Hello World'" label="Hello World" />
   </div>
 </template>
 

@@ -222,3 +222,37 @@ export const Default = {
     },
   },
 };
+
+/**
+ * Buttons with tooltips showing different positions and configurations.
+ * Hover over each button to see the tooltip.
+ */
+export const WithTooltip = {
+  render: () => ({
+    components: { Button },
+    template: `
+      <div style="display: flex; flex-direction: column; gap: 2rem; padding: 2rem; align-items: center;">
+        <p style="text-align: center; color: #666; max-width: 600px;">
+          Buttons can be enhanced with tooltips using the <code>v-tooltip</code> directive. Tooltips can be positioned at top or bottom. Hover over each button to see the tooltip in action.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <Button 
+            v-tooltip.top="'Tooltip on top'"
+            label="Top Tooltip"
+          />
+          <Button 
+            v-tooltip.bottom="'Tooltip on bottom'"
+            label="Bottom Tooltip"
+          />
+        </div>
+    `,
+  }),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "Buttons can be enhanced with tooltips using the `v-tooltip` directive. Hover over each button to see the tooltip in action.",
+      },
+    },
+  },
+};

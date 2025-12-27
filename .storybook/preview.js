@@ -1,5 +1,6 @@
 import { setup } from "@storybook/vue3";
 import PrimeVue from "primevue/config";
+import Tooltip from "primevue/tooltip";
 import MyCustomPreset from "../src/theme";
 import "../src/style.css";
 import "primeicons/primeicons.css";
@@ -15,6 +16,7 @@ setup((app) => {
       preset: MyCustomPreset,
     },
   });
+  app.directive("tooltip", Tooltip);
 });
 
 /** @type { import('@storybook/vue3-vite').Preview } */
