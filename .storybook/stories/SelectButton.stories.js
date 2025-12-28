@@ -103,10 +103,7 @@ export const Default = {
       return { args, value, options };
     },
     template: `
-      <div class="card flex flex-col">
         <SelectButton v-model="value" :options="options" v-bind="args" />
-        <p class="ml-4">Selected: {{ value }}</p>
-        </div>
     `,
   }),
 };
