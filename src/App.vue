@@ -35,7 +35,7 @@ const viewOptions = [
             :allow-empty="false"
           >
             <template #option="slotProps">
-              <i :class="slotProps.option.icon" class="mr-2"></i>
+              <i :class="slotProps.option.icon"></i>
               <span>{{ slotProps.option.label }}</span>
             </template>
           </SelectButton>
