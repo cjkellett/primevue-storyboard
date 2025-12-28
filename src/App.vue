@@ -1,13 +1,18 @@
 <script setup>
+import { ref } from "vue";
 import Tabs from "primevue/tabs";
 import TabList from "primevue/tablist";
 import Tab from "primevue/tab";
 import TabPanels from "primevue/tabpanels";
 import TabPanel from "primevue/tabpanel";
+import SelectButton from "primevue/selectbutton";
+
+const viewMode = ref("Analysis");
+const viewOptions = ["Analysis", "Table View"];
 </script>
 
 <template>
-  <div class="container">
+  <div class="p-8 mx-auto max-w-7xl min-h-screen">
     <Tabs value="0">
       <TabList>
         <Tab value="0">Home</Tab>
@@ -16,23 +21,18 @@ import TabPanel from "primevue/tabpanel";
       <TabPanels>
         <TabPanel value="0">
           <h1 class="text-primary-500">Home</h1>
-          <div class="flex flex-col gap-4">
-            <p class="mb-8">This is the Home page.</p>
+          <p class="mb-8">This is the Home page.</p>
+          <SelectButton
+            v-model="viewMode"
+            :options="viewOptions"
+            class="mb-4"
+          />
+          <div v-if="viewMode === 'Analysis'">
+            <p>Analysis content goes here.</p>
           </div>
-          <Tabs value="0">
-            <TabList>
-              <Tab value="0">Analysis</Tab>
-              <Tab value="1">Table View</Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel value="0">
-                <p>Analysis content goes here.</p>
-              </TabPanel>
-              <TabPanel value="1">
-                <p>Table View content goes here.</p>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
+          <div v-if="viewMode === 'Table View'">
+            <p>Table View content goes here.</p>
+          </div>
         </TabPanel>
         <TabPanel value="1">
           <h1>About</h1>
@@ -42,16 +42,3 @@ import TabPanel from "primevue/tabpanel";
     </Tabs>
   </div>
 </template>
-
-<style scoped>
-.container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-h1 {
-  margin: 0 0 1rem 0;
-}
-</style>
