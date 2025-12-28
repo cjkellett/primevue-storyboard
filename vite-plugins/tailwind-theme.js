@@ -7,7 +7,7 @@ const projectRoot = resolve(__dirname, "..");
 
 /**
  * Vite plugin to auto-generate Tailwind theme CSS from colors.js
- * Regenerates CSS when colors.js changes in dev mode
+ * Regenerates CSS when colors.js changes (restart server to see changes)
  */
 export function tailwindThemePlugin() {
   let isGenerating = false;
@@ -40,11 +40,11 @@ export function tailwindThemePlugin() {
 
       // Watch colors.js and regenerate CSS on change
       server.watcher.add(colorsPath);
-
       server.watcher.on("change", async (file) => {
         if (file === colorsPath) {
           await generateCSS();
           console.log("✓ Regenerated tailwind.theme.css from colors.js");
+          console.log("  (Restart server to see changes)");
         }
       });
 
@@ -53,4 +53,3 @@ export function tailwindThemePlugin() {
     },
   };
 }
-
