@@ -1,0 +1,27 @@
+:root {
+  --dm-ocean-50: #f2fdff;
+  --dm-ocean-100: #d2f1f4;
+  --dm-ocean-200: #b3edf5;
+  --dm-ocean-300: #76d2df;
+  --dm-ocean-400: #40c3cd;
+  --dm-ocean-500: red;
+  --dm-ocean-600: #0a8b9a;
+  --dm-ocean-700: #046f7b;
+  --dm-ocean-800: #045f69;
+  --dm-ocean-900: #044d55;
+  --dm-ocean-950: #013a41;
+}
+
+@theme {
+  --color-primary-50: var(--dm-ocean-50);
+  --color-primary-100: var(--dm-ocean-100);
+  --color-primary-200: var(--dm-ocean-200);
+  --color-primary-300: var(--dm-ocean-300);
+  --color-primary-400: var(--dm-ocean-400);
+  --color-primary-500: var(--dm-ocean-500);
+  --color-primary-600: var(--dm-ocean-600);
+  --color-primary-700: var(--dm-ocean-700);
+  --color-primary-800: var(--dm-ocean-800);
+  --color-primary-900: var(--dm-ocean-900);
+  --color-primary-950: var(--dm-ocean-950);
+}

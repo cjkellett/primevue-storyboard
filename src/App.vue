@@ -15,7 +15,7 @@ import TabPanel from "primevue/tabpanel";
       </TabList>
       <TabPanels>
         <TabPanel value="0">
-          <h1 class="text-red-500">Home</h1>
+          <h1 class="text-primary-500">Home</h1>
           <p>This is the Home page.</p>
           <Tabs value="0">
             <TabList>

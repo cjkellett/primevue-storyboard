@@ -34,3 +34,16 @@ To ensure the app and Storybook use the same custom theme:
    ```
 
 Both environments import the same theme file, ensuring consistency. Update `src/theme.js` to modify the theme for both app and Storybook.
+
+## Tailwind CSS Configuration (Without Affecting Existing Styles)
+
+To use Tailwind CSS utilities without overriding existing styles, exclude the base/preflight layer in `src/style.css`:
+
+```css
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+```
+
+By omitting the base layer import, Tailwind's reset styles won't be applied, preserving your existing CSS while still allowing you to use utility classes like `text-red-500`, `p-4`, etc.

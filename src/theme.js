@@ -1,5 +1,6 @@
 import Aura from "@primeuix/themes/aura";
 import { definePreset } from "@primeuix/themes";
+import { dmOceanColors } from "./colors.js";
 
 const MyCustomPreset = definePreset(Aura, {
   primitive: {
@@ -8,19 +9,7 @@ const MyCustomPreset = definePreset(Aura, {
       semibold: "600",
       bold: "700",
     },
-    "dm-ocean": {
-      50: "#F2FDFF",
-      100: "#D2F1F4",
-      200: "#B3EDF5",
-      300: "#76D2DF",
-      400: "#40C3CD",
-      500: "#007A88",
-      600: "#0A8B9A",
-      700: "#046F7B",
-      800: "#045F69",
-      900: "#044D55",
-      950: "#013A41",
-    },
+    "dm-ocean": dmOceanColors,
   },
   semantic: {
     primary: {
