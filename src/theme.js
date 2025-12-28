@@ -71,6 +71,21 @@ const MyCustomPreset = definePreset(Aura, {
         checkedShadow: "0 2px 4px rgba(0, 0, 0, 0.08)",
       },
     },
+    tabs: {
+      tab: {
+        borderWidth: "0 0 2px 0",
+        activeBorderColor: "{dm-ocean-500}",
+        activeColor: "{dm-ocean-900}",
+        padding: "8px 12px",
+        fontWeight: 600,
+        gap: "4px",
+      },
+      css: `
+        .p-tabs button[role="tab"] {
+          font-size: 16px;
+        }
+      `,
+    },
   },
 });
 
