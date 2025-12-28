@@ -9,6 +9,28 @@ const MyCustomPreset = definePreset(Aura, {
       semibold: "600",
       bold: "700",
     },
+    borderRadius: {
+      none: "0",
+      xs: "2px",
+      sm: "4px",
+      md: "6px",
+      lg: "8px",
+      xl: "12px",
+    },
+    spacing: {
+      0: "0",
+      50: "2px",
+      100: "4px",
+      150: "6px",
+      200: "8px",
+      300: "12px",
+      400: "16px",
+      600: "24px",
+      800: "32px",
+      1000: "40px",
+      1200: "48px",
+      1600: "64px",
+    },
     "dm-ocean": dmOceanColors,
   },
   semantic: {
@@ -35,6 +57,18 @@ const MyCustomPreset = definePreset(Aura, {
         focusRing: {
           width: "2px",
         },
+      },
+    },
+    togglebutton: {
+      root: {
+        padding: "{spacing.50}",
+        borderRadius: "{borderRadius.none}",
+        fontWeight: "{fontWeight.semibold}",
+      },
+      content: {
+        padding: "{spacing.150} {spacing.300}",
+        borderRadius: "{borderRadius.sm}",
+        checkedShadow: "0 2px 4px rgba(0, 0, 0, 0.08)",
       },
     },
   },
