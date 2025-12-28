@@ -8,7 +8,10 @@ import TabPanel from "primevue/tabpanel";
 import SelectButton from "primevue/selectbutton";
 
 const viewMode = ref("Analysis");
-const viewOptions = ["Analysis", "Table View"];
+const viewOptions = [
+  { icon: "pi pi-chart-line", label: "Analysis", value: "Analysis" },
+  { icon: "pi pi-table", label: "Table View", value: "Table View" },
+];
 </script>
 
 <template>
@@ -25,8 +28,17 @@ const viewOptions = ["Analysis", "Table View"];
           <SelectButton
             v-model="viewMode"
             :options="viewOptions"
+            optionLabel="label"
+            optionValue="value"
+            dataKey="value"
             class="mb-4"
-          />
+            :allow-empty="false"
+          >
+            <template #option="slotProps">
+              <i :class="slotProps.option.icon" class="mr-2"></i>
+              <span>{{ slotProps.option.label }}</span>
+            </template>
+          </SelectButton>
           <div v-if="viewMode === 'Analysis'">
             <p>Analysis content goes here.</p>
           </div>
