@@ -18,6 +18,13 @@
   font-size: inherit;
 }
 
+/* Exclude PrimeIcons from font-family override */
+#storybook-root .pi,
+#storybook-root [class*="pi-"],
+#storybook-root i[class*="pi"] {
+  font-family: "primeicons" !important;
+}
+
 /* Exclude code blocks from Titillium Web font */
 
 .sbdocs pre,
