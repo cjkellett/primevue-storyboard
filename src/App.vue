@@ -23,7 +23,7 @@ const viewOptions = [
       </TabList>
       <TabPanels>
         <TabPanel value="0">
-          <h1 class="text-primary-500">Home</h1>
+          <h1>Home</h1>
           <p class="mb-8">This is the Home page.</p>
           <SelectButton
             v-model="viewMode"
